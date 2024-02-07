@@ -6,6 +6,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     author = models.CharField(max_length=100)
+    Images = models.ImageField(upload_to='images')
     
    
 
