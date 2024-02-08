@@ -17,7 +17,8 @@ class Post(models.Model):
     Content = models.TextField()
     Images = models.ImageField(upload_to='images')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
-    
+    Like_count = models.IntegerField()
+    isLiked = models.BooleanField()
     def __str__(self):
         return self.title
     
